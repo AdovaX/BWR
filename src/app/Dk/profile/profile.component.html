@@ -1,0 +1,56 @@
+
+<div class="container  ">
+<div class="jumbotron">
+
+<div class="row">
+<div class="col-sm-4"></div>
+<div class="col-sm-4">
+<img src="../assets/images/user_default.png" class="user_img">
+</div>
+<div class="col-sm-4"></div>    
+</div>
+
+<div class="row"> 
+<div class="col-sm-4"> 
+<div class="  dk_bottom_margin">
+<mat-card>
+<mat-form-field class="example-full-width">
+<input matInput placeholder="Your full name" value="" formControlName="full_name">   
+<mat-icon matSuffix>mode_edit</mat-icon>
+</mat-form-field>
+</mat-card>
+</div>
+</div>
+<div class="col-sm-4"> 
+<div class="  dk_bottom_margin">
+<mat-card>  
+<mat-form-field class="example-full-width">
+<span matPrefix>+1 &nbsp;</span>
+<input type="tel" matInput placeholder="Telephone" formControlName="user_phone">
+<mat-icon matSuffix>mode_edit</mat-icon>
+</mat-form-field>
+</mat-card> 
+</div>
+</div>
+<div class="col-sm-4"> 
+<div class="  dk_bottom_margin">
+<mat-card>
+<mat-form-field class="example-full-width">
+<input matInput placeholder="Email ID" value="" formControlName="user_email">
+</mat-form-field>
+</mat-card>
+</div>
+</div>
+<div class="col-sm-8"> 
+<div class="  dk_bottom_margin">
+<mat-card>
+<mat-form-field class="example-full-width">
+<textarea matInput placeholder="Address" rows="5" formControlName="user_address"></textarea>
+</mat-form-field>
+</mat-card>
+</div>
+<button mat-raised-button color="primary" (click)="getData()">Update info</button>
+</div>
+</div>
+</div>
+</div>

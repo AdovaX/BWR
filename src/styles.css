@@ -1,0 +1,51 @@
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.dk_logout_icon{
+margin: 0 16px;
+}
+.dk_color_white{
+	color: white;
+}
+ 
+.dk_color_black{
+	color: black;
+}
+h4{
+  font-size: small;
+}
+.navbar-inverse .navbar-brand , .navbar-inverse .navbar-nav>li>a{
+  color: white;
+}
+.navbar{
+  border-radius: 0px;
+}
+mat-icon{
+  vertical-align: bottom;
+}
+.dk_margin_top{
+  margin-top: 20px;
+}
+@media (min-width: 1200px){
+.container_sub {
+     
+    padding-left: 140px;
+    padding-top: 75px;
+}
+}
+  @media screen and (max-width: 575px) {
+  
+    .dk_mob_top_margin{
+      margin-top: 62px!important;
+    }
+    .nav {
+      padding-left: 20px;
+    }
+  }
+ 
+.navbar-brand{
+  padding: 12px 15px;
+}
+.navbar-collapse{
+  padding-right: 0px;
+  padding-left: 0px;
+}
