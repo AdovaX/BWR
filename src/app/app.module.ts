@@ -8,8 +8,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { HomeComponent } from './Dk/home/home.component';
 import { HeaderComponent } from './Dk/header/header.component';
 import { FooterComponent } from './Dk/footer/footer.component';
-import { ComplaintComponent } from './Dk/complaint/complaint.component';
-import { ContactComponent } from './Dk/contact/contact.component';
+ import { ContactComponent } from './Dk/contact/contact.component';
 import { MatIconModule } from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatCardModule} from '@angular/material/card';
@@ -24,16 +23,17 @@ import {MatExpansionModule} from '@angular/material/expansion';
 
 import { ProfileComponent } from './Dk/profile/profile.component';
 import { NotificationsComponent } from './Dk/notifications/notifications.component';
+import { RepairComponent } from './Dk/repair/repair.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    FooterComponent,
-    ComplaintComponent,
+    FooterComponent, 
     ContactComponent,
     ProfileComponent,
-    NotificationsComponent
+    NotificationsComponent,
+    RepairComponent
   ],
   imports: [
     BrowserModule,
