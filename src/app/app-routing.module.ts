@@ -12,7 +12,7 @@ const routes: Routes = [
 { path: 'Repair', component: RepairComponent, pathMatch: 'full' },
 { path: 'Profile', component: ProfileComponent, pathMatch: 'full' },
 { path: 'Contact', component: ContactComponent, pathMatch: 'full' },
-{ path: 'Contact', component: ContactComponent, pathMatch: 'full' },
+{ path: 'Notifications', component: NotificationsComponent, pathMatch: 'full' },
 { path: 'History', component: HistoryComponent, pathMatch: 'full' },
 { path: 'Dashboard', component: HomeComponent, pathMatch: 'full' }
 
