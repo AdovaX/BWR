@@ -17,6 +17,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatBadgeModule} from '@angular/material/badge';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 
   import { HttpClientModule } from "@angular/common/http";
@@ -47,6 +48,7 @@ import { NotificationsComponent } from './Dk/notifications/notifications.compone
     MatDatepickerModule,
     MatNativeDateModule,
     MatBadgeModule,
+    MatExpansionModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

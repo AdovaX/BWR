@@ -3,22 +3,55 @@
 <div class="container  ">
 <div class="jumbotron">
 
-
-<div class="alert alert-success">
-  <strong>Completed!</strong> Your HP Laptop has been reapaired and ready to pick.
-  [11/12/2010]
-</div>
-
-<div class="alert alert-info">
-  <strong>On Progress!</strong> Your HP Laptop is repairing.
-  [11/12/2010]
-</div>
+<mat-accordion>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+ <strong>Completed ! </strong> 
+      </mat-panel-title>
+      <mat-panel-description>
+[ 12/12/2010 ]
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+      Your HP Laptop has been repaired and ready to pick up. Please visit our shop to recive your package. Thank you so much for reaching us.
+ 
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+ <strong>On Progress! </strong> 
+      </mat-panel-title>
+      <mat-panel-description>
+[ 12/12/2010 ]
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+           Your HP Laptop is under repairing. We will let you know once it's been repaired.
 
  
-<div class="alert alert-danger">
-  <strong>On Hold!</strong> You HP Laptop is on hold.
-  [11/12/2010]
-</div>
+  </mat-expansion-panel>
+
+
+  <mat-expansion-panel (opened)="panelOpenState = true"
+                       (closed)="panelOpenState = false">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+ <strong>On Checking ! </strong> 
+      </mat-panel-title>
+      <mat-panel-description>
+[ 10/12/2010 ]
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+      Your HP Laptop is checking by our technitian. We will let you know once we start the repairing.
+      Thank you for your coorperation.
+ 
+  </mat-expansion-panel>
+
+</mat-accordion>
+
+ 
+
+
+
 
 </div>
 </div>
