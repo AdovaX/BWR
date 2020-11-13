@@ -1,8 +1,0 @@
-{
-  "/backend/*": {
-    "target": "http://localhost:8080/users",
-    "secure": false,
-    "logLevel": "debug",
-    "changeOrigin": true,
-  }
-}

@@ -11,7 +11,7 @@ const baseUrl = 'http://localhost:4201';
 })
 @Injectable()
 export class ProfileComponent implements OnInit {
-
+person;
   constructor (private http:HttpClient){ }
 
   ngOnInit(): void {
@@ -20,7 +20,8 @@ export class ProfileComponent implements OnInit {
  
    getData(){
 
+this.person = this.http.get('/backend/usersw').subscribe(response => console.log(response));
+
   
- 
   }
 }

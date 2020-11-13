@@ -29,7 +29,7 @@ app.get('/', function (req, res) {
 });
 
  
-app.get('/users', function (req, res) {
+app.get('/backend/usersw', function (req, res) {
   res.json({ msg: "hello"});
    // mc.query('SELECT * FROM tasks', function (error, results, fields) {
        // if (error) throw error;
