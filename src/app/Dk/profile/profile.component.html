@@ -37,20 +37,40 @@
 <mat-card>
 <mat-form-field class="example-full-width">
 <input matInput placeholder="Email ID" value="" formControlName="user_email">
+<mat-icon matSuffix>mode_edit</mat-icon>
+
 </mat-form-field>
 </mat-card>
 </div>
 </div>
 <div class="col-sm-8"> 
+  <div class="  dk_bottom_margin">
+  <mat-card>
+   <mat-form-field class="example-full-width">
+   <textarea matInput placeholder="Address" rows="5" formControlName="user_address"></textarea>
+   <mat-icon matSuffix>mode_edit</mat-icon>
+
+   </mat-form-field>
+  </mat-card>
+  </div>
+</div>
+<div class="col-sm-4"> 
 <div class="  dk_bottom_margin">
 <mat-card>
-<mat-form-field class="example-full-width">
-<textarea matInput placeholder="Address" rows="5" formControlName="user_address"></textarea>
+<mat-form-field>
+  <input matInput [matDatepicker]="picker" placeholder="Date of birth">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+  <mat-icon matSuffix>mode_edit</mat-icon>
+
 </mat-form-field>
+
 </mat-card>
 </div>
 <button mat-raised-button color="primary" (click)="getData()">Update info</button>
+
 </div>
+
 </div>
 </div>
 </div>

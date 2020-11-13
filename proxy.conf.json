@@ -1,9 +1,8 @@
 {
-  "/backend/*": {
-    "target" : "http://localhost:8080/users/",
-    "secure" : false,
-    "logLevel" : "debug",
-    "changeOrigin" : true,
-    "pathRewrite" : {"^/backend" : "http://localhost:8080/users/"}
-  }
+    "/backend/*": {
+        "target": "http://localhost:8080/users",
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug"
+    }
 }

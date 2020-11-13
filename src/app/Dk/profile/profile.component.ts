@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
  import { HttpClient } from "@angular/common/http";
 import 'rxjs/add/operator/map';
 import { Injectable } from '@angular/core';
+const baseUrl = 'http://localhost:4201';
+
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
@@ -18,9 +20,7 @@ export class ProfileComponent implements OnInit {
  
    getData(){
 
-
-this.http.get('/backend/users/')
-        .subscribe(response => console.log(response));
+  
  
   }
 }

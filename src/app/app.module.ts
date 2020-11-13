@@ -14,9 +14,15 @@ import { MatIconModule } from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatCardModule} from '@angular/material/card';
  import {MatInputModule} from '@angular/material/input';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import {MatBadgeModule} from '@angular/material/badge';
+
+
   import { HttpClientModule } from "@angular/common/http";
 
 import { ProfileComponent } from './Dk/profile/profile.component';
+import { NotificationsComponent } from './Dk/notifications/notifications.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +31,8 @@ import { ProfileComponent } from './Dk/profile/profile.component';
     FooterComponent,
     ComplaintComponent,
     ContactComponent,
-    ProfileComponent
+    ProfileComponent,
+    NotificationsComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +43,10 @@ import { ProfileComponent } from './Dk/profile/profile.component';
     MatMenuModule,
     MatCardModule,
     MatInputModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatBadgeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
