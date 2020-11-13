@@ -24,6 +24,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import { ProfileComponent } from './Dk/profile/profile.component';
 import { NotificationsComponent } from './Dk/notifications/notifications.component';
 import { RepairComponent } from './Dk/repair/repair.component';
+import { HistoryComponent } from './Dk/history/history.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +34,8 @@ import { RepairComponent } from './Dk/repair/repair.component';
     ContactComponent,
     ProfileComponent,
     NotificationsComponent,
-    RepairComponent
+    RepairComponent,
+    HistoryComponent
   ],
   imports: [
     BrowserModule,
