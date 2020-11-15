@@ -17,14 +17,16 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatExpansionModule} from '@angular/material/expansion';
-
-
-  import { HttpClientModule } from "@angular/common/http";
-
+import {MatListModule} from '@angular/material/list';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+import { ReactiveFormsModule} from '@angular/forms';
+ import { HttpClientModule } from "@angular/common/http";
 import { ProfileComponent } from './Dk/profile/profile.component';
 import { NotificationsComponent } from './Dk/notifications/notifications.component';
 import { RepairComponent } from './Dk/repair/repair.component';
 import { HistoryComponent } from './Dk/history/history.component';
+import { TrackComponent } from './Dk/track/track.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +37,8 @@ import { HistoryComponent } from './Dk/history/history.component';
     ProfileComponent,
     NotificationsComponent,
     RepairComponent,
-    HistoryComponent
+    HistoryComponent,
+    TrackComponent
   ],
   imports: [
     BrowserModule,
@@ -51,6 +54,11 @@ import { HistoryComponent } from './Dk/history/history.component';
     MatNativeDateModule,
     MatBadgeModule,
     MatExpansionModule,
+    MatListModule,
+    MatFormFieldModule,
+    MatSelectModule, 
+    ReactiveFormsModule,
+     
   ],
   providers: [],
   bootstrap: [AppComponent]

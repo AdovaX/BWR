@@ -1,31 +1,68 @@
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-wrench 
-"></span>
- BW | Repair Application  </a>  
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav"> 
- <li> <a routerLink="Dashboard"> <span class="glyphicon glyphicon-tree-conifer"></span> Dashboard</a></li>
- <li><a routerLink="Complaint"> <span class="glyphicon glyphicon-export 
-"></span> Repair request</a></li>
- <li><a href="#0"> <span class="glyphicon glyphicon-time"></span> Track order</a></li>
- <li><a href="#0"> <span class="glyphicon glyphicon-book"></span> History</a></li>
- <li><a routerLink="Profile"> <span class="glyphicon glyphicon-user"></span> Profile</a></li>
- <li><a href="#0"> <span class="glyphicon glyphicon-tower"></span> Buy parts</a></li>
- <li><a href="#0"> <span class="glyphicon glyphicon-shopping-cart"></span> Shopping</a></li>
- <li><a href="#0"> <span class="glyphicon glyphicon-phone-alt"></span> Contact</a></li>
- <li><a href="#0"> <span class="glyphicon glyphicon-bell"></span> Notifications</a></li>
-         <li><a href="#">Log out <span class="glyphicon glyphicon-log-out"></span></a></li>
 
-      </ul>
-       
-    </div>
+<div class="container">
+  <div class="jumbotron">
+     <h1>Contact us</h1>
+  <p> We will be responding for your enquiries as soon as possbile.  
+  </p>
+<br>
+
+
+<mat-card>
+<div class="row"> 
+  <div class="col-sm-4"> 
+  <mat-form-field  class="example-full-width">
+  <mat-label>Please select a category</mat-label>
+  <mat-select   required>
+  <mat-option>--</mat-option>
+  <mat-option *ngFor="let Categories of Categories" [value]="Categories.value" >
+  {{Categories.viewValue}}
+  </mat-option>
+  </mat-select>
+  </mat-form-field>
   </div>
-</nav> 
+  <div class="col-sm-4">
+  <mat-form-field class="example-full-width">
+  <mat-label>Please select a sub-category</mat-label>
+  <mat-select   required>
+  <mat-option>--</mat-option>
+  <mat-option *ngFor="let subCategories of subCategories" [value]="subCategories.value" >
+  {{subCategories.viewValue}}
+  </mat-option>
+  </mat-select>
+  </mat-form-field>
+  </div>
+  <div class="col-sm-4"> 
+  <mat-form-field class="example-full-width">
+  <mat-label>Please select a fault</mat-label>
+  <mat-select   required>
+  <mat-option>--</mat-option>
+  <mat-option *ngFor="let Faults of Faults" [value]="Faults.value" >
+  {{Faults.viewValue}}
+  </mat-option>
+  </mat-select>
+  </mat-form-field>
+  </div>
+</div>
+
+<div class="row"> 
+<div class="col-sm-8"> 
+ 
+ 
+<mat-form-field class="example-full-width">
+    <textarea matInput placeholder="Leave your enquiries" rows="5"></textarea>
+  </mat-form-field>
+
+    <button mat-raised-button color="primary">Send <mat-icon>send </mat-icon> </button>
+
+
+</div>
+</div>
+
+</mat-card>
+
+
+
+
+
+  </div>
+</div>
