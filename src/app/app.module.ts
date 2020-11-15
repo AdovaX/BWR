@@ -27,6 +27,8 @@ import { NotificationsComponent } from './Dk/notifications/notifications.compone
 import { RepairComponent } from './Dk/repair/repair.component';
 import { HistoryComponent } from './Dk/history/history.component';
 import { TrackComponent } from './Dk/track/track.component';
+import { LoginComponent } from './Dk/login/login.component';
+ 
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +40,8 @@ import { TrackComponent } from './Dk/track/track.component';
     NotificationsComponent,
     RepairComponent,
     HistoryComponent,
-    TrackComponent
+    TrackComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

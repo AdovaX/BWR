@@ -7,6 +7,7 @@ import { ContactComponent } from './Dk/contact/contact.component';
 import { NotificationsComponent } from './Dk/notifications/notifications.component';
 import { HistoryComponent } from './Dk/history/history.component';
 import { TrackComponent } from './Dk/track/track.component';
+import { LoginComponent } from './Dk/login/login.component';
 
 const routes: Routes = [
 { path: '', component: HomeComponent, pathMatch: 'full' },
@@ -14,6 +15,7 @@ const routes: Routes = [
 { path: 'Profile', component: ProfileComponent, pathMatch: 'full' },
 { path: 'Contact', component: ContactComponent, pathMatch: 'full' },
 { path: 'Tracking', component: TrackComponent, pathMatch: 'full' },
+{ path: 'Login', component: LoginComponent, pathMatch: 'full' },
 { path: 'Notifications', component: NotificationsComponent, pathMatch: 'full' },
 { path: 'History', component: HistoryComponent, pathMatch: 'full' },
 { path: 'Dashboard', component: HomeComponent, pathMatch: 'full' }

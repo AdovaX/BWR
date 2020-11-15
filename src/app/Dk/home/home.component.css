@@ -30,4 +30,6 @@ h4{
 .dk_no_margin{
    margin-left: -16px!important;
 }
- 
+mat-card{
+  margin-top: 10px;
+}
