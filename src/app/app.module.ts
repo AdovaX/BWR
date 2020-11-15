@@ -28,7 +28,9 @@ import { RepairComponent } from './Dk/repair/repair.component';
 import { HistoryComponent } from './Dk/history/history.component';
 import { TrackComponent } from './Dk/track/track.component';
 import { LoginComponent } from './Dk/login/login.component';
- 
+import { PartsComponent } from './Dk/parts/parts.component';
+import {MatStepperModule} from '@angular/material/stepper';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +43,8 @@ import { LoginComponent } from './Dk/login/login.component';
     RepairComponent,
     HistoryComponent,
     TrackComponent,
-    LoginComponent
+    LoginComponent,
+    PartsComponent
   ],
   imports: [
     BrowserModule,
@@ -61,6 +64,7 @@ import { LoginComponent } from './Dk/login/login.component';
     MatFormFieldModule,
     MatSelectModule, 
     ReactiveFormsModule,
+    MatStepperModule,
      
   ],
   providers: [],
