@@ -4,10 +4,39 @@
   <mat-step [stepControl]="firstFormGroup">
     <form [formGroup]="firstFormGroup">
       <ng-template matStepLabel>Step 1</ng-template>
-      <h2>Choose category</h2>
-      <mat-form-field>
-        <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
-      </mat-form-field>
+
+
+<div class="row"> 
+<div class="col-sm-4">
+
+<h2>Choose category</h2>
+<mat-form-field>
+<mat-label>Favorite food</mat-label>
+<mat-select formControlName="firstCtrl">
+<mat-option *ngFor="let food of foods" [value]="food.value" >
+{{food.viewValue}}
+</mat-option>
+</mat-select>
+</mat-form-field>
+
+</div>
+<div class="col-sm-4"> 
+
+<h2>Choose parts</h2>
+<mat-form-field>
+<mat-label>Favorite food</mat-label>
+<mat-select formControlName="firstCtrl">
+<mat-option *ngFor="let food of foods" [value]="food.value" >
+{{food.viewValue}}
+</mat-option>
+</mat-select>
+</mat-form-field>
+
+</div>
+<div class="col-sm-4"> </div>
+</div>
+
+ 
       <div>
         <button mat-raised-button color="primary" matStepperNext>Next</button>
       </div>
@@ -16,9 +45,9 @@
   <mat-step [stepControl]="secondFormGroup">
     <form [formGroup]="secondFormGroup">
       <ng-template matStepLabel>Step 2</ng-template>
-      <mat-form-field>
-        <input matInput placeholder="Address" formControlName="secondCtrl" required>
-      </mat-form-field>
+     <mat-form-field class="example-full-width">
+    <textarea matInput placeholder="Delivery address" formControlName="secondCtrl" rows="5"></textarea>
+  </mat-form-field>
       <div>
         <button mat-raised-button color="warn" matStepperPrevious>Back</button>&nbsp;
         <button mat-raised-button color="primary" matStepperNext>Next</button>
@@ -27,10 +56,26 @@
   </mat-step>
   <mat-step>
     <ng-template matStepLabel>Step 3</ng-template>
-    You are now done.
+    
+<div class="row"> 
+<div class="col-sm-4">
+
+<h2>Final confirmation</h2>
+ 
+ Category : abc <br>
+
+ Address : abd <br>
+
+</div>
+</div>
+ 
+
+
     <div>
       <button mat-raised-button color="warn" matStepperPrevious>Back</button>&nbsp;
-      <button mat-raised-button color="primary" (click)="stepper.reset()">Reset</button>
+      <button mat-raised-button color="primary" (click)="stepper.reset()">Reset</button>&nbsp;
+        <button mat-raised-button color="accent">Submit</button>
+
     </div>
   </mat-step>
 </mat-horizontal-stepper>
