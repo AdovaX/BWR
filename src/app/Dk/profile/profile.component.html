@@ -1,6 +1,8 @@
 
 <div class="container  ">
   <div class="jumbotron">
+    <form [formGroup]="user_profile" novalidate>
+
     <div class="row">
       <div class="col-sm-4"></div>
       <div class="col-sm-4">
@@ -57,7 +59,7 @@
       <div class="  dk_bottom_margin">
         <mat-card>
         <mat-form-field>
-        <input matInput [matDatepicker]="picker" placeholder="Date of birth">
+        <input matInput [matDatepicker]="picker" placeholder="Date of birth" formControlName="user_dob">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
         <mat-icon matSuffix>mode_edit</mat-icon>
@@ -65,9 +67,11 @@
         </mat-card>
       </div>
       <button mat-raised-button color="primary" (click)="getData()">Update info 
-        <mat-icon>update </mat-icon> 
+        <span class="glyphicon glyphicon-send 
+"></span>
       </button>
     </div>
     </div>
+  </form>
   </div>
 </div>
