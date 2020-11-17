@@ -1,1 +1,113 @@
-<p>repair works!</p>
+
+<div class="container  ">
+  <div class="jumbotron">
+ 
+<mat-horizontal-stepper [linear]="isLinear" #stepper>
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Product Details</ng-template>
+      <div class="row"> 
+        <div class="col-sm-4"> 
+      <mat-form-field>
+        <mat-label>Product Name</mat-label>
+        <input matInput placeholder="Product Name" formControlName="firstCtrl" required>
+      </mat-form-field>
+        </div>
+        <div class="col-sm-4"> 
+          <mat-form-field>
+  <mat-label>Choose category</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let food of foods" [value]="food.value">
+      {{food.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+        </div>
+        <div class="col-sm-4"> 
+          <mat-form-field>
+  <mat-label>Choose Faults</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let food of foods" [value]="food.value">
+      {{food.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+        </div>
+        <div class="col-sm-8"> 
+  <mat-form-field class="example-full-width">
+    <mat-label>Leave a comment</mat-label>
+    <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+  </mat-form-field>
+
+        </div>
+
+        <div class="col-sm-4"> 
+          <mat-form-field>
+  <mat-label>Choose Brand</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let food of foods" [value]="food.value">
+      {{food.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+        </div>
+
+      </div>
+
+      <div>
+
+
+
+
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup" label="Confirm your address">
+    <form [formGroup]="secondFormGroup">
+  
+  <div class="row">
+        <div class="col-sm-8"> 
+  <mat-form-field class="example-full-width">
+    <mat-label>Your address</mat-label>
+    <textarea matInput formControlName="secondCtrl" placeholder="Ex. It makes me feel..."></textarea>
+  </mat-form-field>
+
+        </div>
+  </div>
+
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Confirm</ng-template> <br>
+     
+      <p>Dear User,
+You are about to raise a repair request to Blackwhite technologies with the below details.</p>
+
+<mat-divider></mat-divider>
+<br>
+Product name : abc <br>
+Product Category : abcd <br>
+Product brand : abcd <br>
+Product faults : <br>
+Address : abc <br>
+
+
+ <br>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>&nbsp;
+      <button mat-raised-button color="warn" (click)="stepper.reset()">Reset</button>&nbsp;
+      <button mat-raised-button color="primary" >Confirm</button>&nbsp;
+    </div>
+  </mat-step>
+</mat-horizontal-stepper>
+
+</div>
+</div>
