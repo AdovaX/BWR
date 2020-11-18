@@ -12,29 +12,31 @@ app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
-// connection configurations
-const mc = mysql.createConnection({
+const Db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'node'
+    database: 'repairapplication_db'
 });
+Db.connect();
 
- 
-mc.connect();
 
- 
 app.get('/', function (req, res) {
     return res.send({ error: true, message: 'hello' })
 });
 
- 
-app.get('/backend/usersw', function (req, res) {
-  res.json({ msg: "hello"});
-   // mc.query('SELECT * FROM tasks', function (error, results, fields) {
-       // if (error) throw error;
-        //return res.send({ error: false, data: results, message: 'Todos list.' });
-    //});
+
+app.get('/backend/listOfBrands', function (req, res) {
+     Db.query('SELECT * FROM brand_table', function (error, results, fields) {
+       
+         if (error) {
+        console.log(error);
+        res.status(500).json({status: 'error'});
+      } else {
+        res.status(200).json(results);
+      }
+
+    });
 });
 
  

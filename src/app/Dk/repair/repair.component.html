@@ -10,7 +10,7 @@
         <div class="col-sm-4"> 
       <mat-form-field>
         <mat-label>Product Name</mat-label>
-        <input matInput placeholder="Product Name" formControlName="firstCtrl" required>
+        <input matInput placeholder="Product Name" formControlName="product_name" required>
       </mat-form-field>
         </div>
         <div class="col-sm-4"> 
@@ -46,7 +46,7 @@
         <div class="col-sm-4"> 
           <mat-form-field>
   <mat-label>Choose Brand</mat-label>
-  <mat-select>
+  <mat-select formControlName="brands_name">
     <mat-option *ngFor="let food of foods" [value]="food.value">
       {{food.viewValue}}
     </mat-option>
