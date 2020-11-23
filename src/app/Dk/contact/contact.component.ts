@@ -34,8 +34,6 @@ export class ContactComponent implements OnInit {
     {value: 'X3', viewValue: 'Battery is dead'},
     {value: 'Z1', viewValue: 'Dropped in water'}
   ];
-
-  
-
+ 
 
 }

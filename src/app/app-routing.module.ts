@@ -23,7 +23,7 @@ const routes: Routes = [
 { path: 'Dashboard', component: HomeComponent, pathMatch: 'full' }
 
 ];
-
+ 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
