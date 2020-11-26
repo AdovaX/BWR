@@ -101,14 +101,14 @@ signInButton.addEventListener('click', () => {
     this.authService.signIn(FacebookLoginProvider.PROVIDER_ID);
   }
 
-  signInWithAmazon(): void {
+  /*(): void {
     this.authService.signIn(AmazonLoginProvider.PROVIDER_ID);
   }
 
   signInWithVK(): void {
     this.authService.signIn(VKLoginProvider.PROVIDER_ID);
   }
-
+*/
   signOut(): void {
     this.authService.signOut();
   }
