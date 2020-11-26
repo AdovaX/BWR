@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
  import { HttpClient } from "@angular/common/http";
  import { Injectable } from '@angular/core';
 import { FormGroup, FormControl, Validators} from '@angular/forms';
+import { SocialAuthService, SocialUser } from 'angularx-social-login';
 
 
 @Component({
@@ -20,12 +21,18 @@ person;
      user_dob: new FormControl(),
      user_phone: new FormControl()
 });
+user: SocialUser;
 
-  constructor (private http:HttpClient){ }
+  constructor (private http:HttpClient,private authService: SocialAuthService){ }
 
   ngOnInit(): void {
 
-  }
+    this.authService.authState.subscribe(user => {
+     this.user = user;
+
+     });
+   
+ }
  
    getData(){
 

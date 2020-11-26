@@ -27,9 +27,23 @@ import { NotificationsComponent } from './Dk/notifications/notifications.compone
 import { RepairComponent } from './Dk/repair/repair.component';
 import { HistoryComponent } from './Dk/history/history.component';
 import { TrackComponent } from './Dk/track/track.component';
-import { LoginComponent } from './Dk/login/login.component';
+//import { LoginComponent } from './Dk/login/login.component';
+import { LoginComponent } from './UG/login/login.component';
 import { PartsComponent } from './Dk/parts/parts.component';
 import {MatStepperModule} from '@angular/material/stepper';
+import { SuccessandfailureComponent } from './Dk/successandfailure/successandfailure.component';
+import { SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-login';
+import {UserService} from './UG/Services/user.service';
+import {
+  GoogleLoginProvider,
+  FacebookLoginProvider,
+  AmazonLoginProvider,
+  VKLoginProvider
+} from 'angularx-social-login';
+
+import { FormsModule } from '@angular/forms';
+import { ForgotpasswordComponent } from './UG/forgotpassword/forgotpassword.component';
+import { ResetPasswordComponent } from './UG/reset-password/reset-password.component';
  
 @NgModule({
   declarations: [
@@ -44,7 +58,10 @@ import {MatStepperModule} from '@angular/material/stepper';
     HistoryComponent,
     TrackComponent,
     LoginComponent,
-    PartsComponent
+    PartsComponent,
+    SuccessandfailureComponent,
+    ForgotpasswordComponent,
+    ResetPasswordComponent
   ],
   imports: [
     BrowserModule,
@@ -65,9 +82,42 @@ import {MatStepperModule} from '@angular/material/stepper';
     MatSelectModule, 
     ReactiveFormsModule,
     MatStepperModule,
+    FormsModule,
+    SocialLoginModule
      
   ],
-  providers: [],
+  providers: [{
+    provide: 'SocialAuthServiceConfig',
+    useValue: {
+      autoLogin: true,
+      providers: [
+        {
+          id: GoogleLoginProvider.PROVIDER_ID,
+          provider: new GoogleLoginProvider(
+            //'624796833023-clhjgupm0pu6vgga7k5i5bsfp6qp6egh.apps.googleusercontent.com'
+           '890970447819-cb2glbl2hbcjq81s9gubhh1kbr747b92.apps.googleusercontent.com'
+          ),
+        },
+        {
+          id: FacebookLoginProvider.PROVIDER_ID,
+          provider: new FacebookLoginProvider('561602290896109'),
+        },
+        {
+          id: AmazonLoginProvider.PROVIDER_ID,
+          provider: new AmazonLoginProvider(
+            'amzn1.application-oa2-client.f074ae67c0a146b6902cc0c4a3297935'
+          ),
+        },
+        {
+          id: VKLoginProvider.PROVIDER_ID,
+          provider: new VKLoginProvider(
+            '7624815'
+          ),
+        },
+      ],
+    } as SocialAuthServiceConfig,
+  },
+  UserService],
   bootstrap: [AppComponent]
 })
 

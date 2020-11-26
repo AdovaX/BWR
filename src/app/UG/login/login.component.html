@@ -1,0 +1,119 @@
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+ 
+<div class="container" id="container">
+  <div class="form-container sign-up-container">
+<div     class="form mt-4 bg" >
+  <form [formGroup]="form" (ngSubmit)="submitForm()">
+  
+      <h1>Create Account</h1>
+      <div class="social-container">
+        <div class="card-block">
+          <button class="btn btn-social-icon btn-google mx-1" (click)="signInWithGoogle()"><span class="fa fa-google"></span></button>
+          <button class="btn btn-social-icon btn-facebook mx-1" (click)="signInWithFB()"><span class="fa fa-facebook"></span></button>
+         <!-- <button class="btn btn-social-icon btn-amazon mx-1" (click)="signInWithAmazon()"><span class="fa fa-amazon"></span></button>-->
+          <button class="btn btn-social-icon btn-amazon mx-1" (click)="signInWithVK()"><span class="fa fa-vk"></span></button>
+        </div>
+      </div>
+      <span>or use your email for registration</span>
+      <input type="text" placeholder="Name" [formControlName]="'firstName'"/>
+      <input type="text" placeholder="User Name" [formControlName]="'userName'"/>
+      <input type="email" placeholder="Email" [formControlName]="'email'"/>
+      <input type="password" placeholder="Password" [formControlName]="'password'"/>
+      <input type="password" placeholder="Confirm Password" [formControlName]="'confirmPassword'"/>
+      <button>Sign Up</button>
+    </form>
+</div>
+  </div>
+  <form [formGroup]="form" (ngSubmit)="loginsubmit()">
+  <div class="form-container sign-in-container">
+<div     class="form mt-4 bg" (submit)="login()">
+      <h1>Sign in</h1>
+      <div class="social-container">
+  <!-- <a href="">
+     <img src="../assets/images/fb.png" alt="" class="fb_icon social">
+   </a>   
+   <a href="">
+     <img src="../assets/images/google.png" alt="" class="fb_icon social" (click)="signInWithGoogle()">
+   </a>   
+   <a href="">
+     <img src="../assets/images/twitter.png" alt="" class="fb_icon social">
+   </a>-->
+    <div class="card-block">
+      <button class="btn btn-social-icon btn-google mx-1" (click)="signInWithGoogle()"><span class="fa fa-google"></span></button>
+      <button class="btn btn-social-icon btn-facebook mx-1" (click)="signInWithFB()"><span class="fa fa-facebook"></span></button>
+    <!-- <button class="btn btn-social-icon btn-amazon mx-1" (click)="signInWithAmazon()"><span class="fa fa-amazon"></span></button>-->
+      <button class="btn btn-social-icon btn-amazon mx-1" (click)="signInWithVK()"><span class="fa fa-vk"></span></button>
+    </div>
+
+         
+      </div>
+      <span>or use your account</span>
+      <input type="email" placeholder="Email"[formControlName]="'email'"/>
+      <input type="password" placeholder="Password"[formControlName]="'password'"/>
+      <a  routerLink="Forgotpassword">Forgot your password?</a>
+      <button class="buttonStyle">Sign In</button>
+    </div>
+  </div>
+  </form>
+  <div class="overlay-container">
+    <div class="overlay">
+      <div class="overlay-panel overlay-left">
+        <h1>Welcome Back!</h1>
+        <p>To keep connected with us please login with your personal info</p>
+        <button class="ghost" id="signIn">Sign In</button>
+      </div>
+      <div class="overlay-panel overlay-right">
+        <h1>Hello, Friend!</h1>
+        <p>Enter your personal details and start journey with us</p>
+        <button class="ghost" id="signUp">Sign Up</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--
+<footer>
+  <p>
+    Created with <i class="fa fa-heart"></i> by
+    <a target="_blank" href="https://florin-pop.com">Florin Pop</a>
+    - Read how I created this and how you can join the challenge
+    <a target="_blank" href="https://www.florin-pop.com/blog/2019/03/double-slider-sign-in-up-form/">here</a>.
+  </p>
+</footer>
+--> 
+
+<!--<div class="jumbotron bg-transparent text-center">
+    <form  >
+    <div *ngIf="!user" class="card text-center">
+      <h6 class="card-header">
+        Repair Application
+      </h6>
+      <div class="card-block">
+        <h4 class="card-title">Not signed in</h4>
+        <p class="card-text">Sign in with</p>
+      </div>
+      <div class="card-block">
+        <button class="btn btn-social-icon btn-google mx-1" (click)="signInWithGoogle()"><span class="fa fa-google"></span></button>
+        <button class="btn btn-social-icon btn-facebook mx-1" (click)="signInWithFB()"><span class="fa fa-facebook"></span></button>
+        <button class="btn btn-social-icon btn-amazon mx-1" (click)="signInWithAmazon()"><span class="fa fa-amazon"></span></button>
+        <button class="btn btn-social-icon btn-amazon mx-1" (click)="signInWithVK()"><span class="fa fa-vk"></span></button>
+      </div>
+    </div>
+    <div *ngIf="user" class="card text-center">
+      <h6 class="card-header">
+        Repair Application
+      </h6>
+      <div class="card-block"></div>
+      <img *ngIf="user.photoUrl" class="card-img-top img-responsive photo" src="{{ user.photoUrl }}">
+      <div class="card-block">
+        <h4 class="card-title">{{ user.name }}</h4>
+        <p class="card-text">{{ user.email }}</p>
+        <p class="card-text">Logged in with {{ user.provider }}</p>
+      </div>
+      <div class="card-block">
+        <button class="btn btn-danger" (click)="signOut()">Sign out</button>
+      </div>
+    </div>
+    </form>
+  </div>-->
+  

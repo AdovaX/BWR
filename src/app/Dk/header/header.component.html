@@ -10,7 +10,8 @@
       "></span>
       BW | Repair Application  </a>  
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
+<div *ngIf="!login">
+      <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav"> 
       <li> 
         <a routerLink="Dashboard"> <span class="glyphicon glyphicon-tree-conifer"></span> Dashboard</a>
@@ -50,10 +51,12 @@
         </a>
       </li>
       <li>
-        <a routerLink="Login">Log out <span class="glyphicon glyphicon-log-out"></span>
+        
+        <a routerLink="Login">Log out <span class="glyphicon glyphicon-log-out" (click)="signOut()"></span>
         </a>
       </li>
       </ul>
     </div>
+  </div>
   </div>
 </nav> 
