@@ -24,7 +24,7 @@ const routes: Routes = [
 { path: 'Login', component: LoginComponent, pathMatch: 'full' },
 { path: 'Notifications', component: NotificationsComponent, pathMatch: 'full' },
 { path: 'History', component: HistoryComponent, pathMatch: 'full' },
-{ path: 'Dashboard', component: HomeComponent, pathMatch: 'full' },
+{ path: 'Dashboard', component: HomeComponent },
 {path:'Successorfailure',component:SuccessandfailureComponent, pathMatch: 'full'},
 {path:'Forgotpassword',component:ForgotpasswordComponent, pathMatch: 'full'}
 
