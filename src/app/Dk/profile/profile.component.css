@@ -7,6 +7,8 @@
   width: 150px;
   display: block;
   margin: auto;
+  padding: 10px;
+  border-radius: 20%;
  }
 .dk_bottom_margin{
   margin-bottom: 20px;
