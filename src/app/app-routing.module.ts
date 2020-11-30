@@ -26,7 +26,9 @@ const routes: Routes = [
 { path: 'History', component: HistoryComponent, pathMatch: 'full' },
 { path: 'Dashboard', component: HomeComponent },
 {path:'Successorfailure',component:SuccessandfailureComponent, pathMatch: 'full'},
-{path:'Forgotpassword',component:ForgotpasswordComponent, pathMatch: 'full'}
+{path: 'lazy',loadChildren: () => import('./techy/techy.module').
+then(module => module.TechyModule)},
+ {path:'Forgotpassword',component:ForgotpasswordComponent, pathMatch: 'full'}
 
 ];
  

@@ -44,6 +44,7 @@ import {
 import { FormsModule } from '@angular/forms';
 import { ForgotpasswordComponent } from './UG/forgotpassword/forgotpassword.component';
 import { ResetPasswordComponent } from './UG/reset-password/reset-password.component';
+ import { EventEmitter } from '@angular/core';
  
 @NgModule({
   declarations: [
@@ -61,7 +62,7 @@ import { ResetPasswordComponent } from './UG/reset-password/reset-password.compo
     PartsComponent,
     SuccessandfailureComponent,
     ForgotpasswordComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent 
   ],
   imports: [
     BrowserModule,
